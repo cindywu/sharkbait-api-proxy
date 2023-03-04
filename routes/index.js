@@ -7,6 +7,7 @@ const API_BASE_URL = process.env.API_BASE_URL
 const API_OPTIONS_STRING = process.env.API_OPTIONS_STRING
 
 router.get('/', async (req, res) => {
+  console.log('hi')
   try {
     const params = url.parse(req.url, true).query
     const apiRes = await needle('get', `${API_BASE_URL}${params.q}${API_OPTIONS_STRING}`)
